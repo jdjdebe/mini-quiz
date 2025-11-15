@@ -46,11 +46,29 @@ const quizData = [
 let currentQuestionIndex = 0;
 let score = 0;
 
-const quizArea = document.getElementById('quiz-area');
-const startButton = document.getElementById('start-button');
+// Vecchio codice:
+// const quizArea = document.getElementById('quiz-area');
+// const startButton = document.getElementById('start-button');
+// startButton.addEventListener('click', startQuiz);
 
-// Aggiungi un listener per avviare il quiz
-startButton.addEventListener('click', startQuiz);
+// NUOVO CODICE (SOLUZIONE):
+// Metti tutta la logica di avvio dentro un evento 'DOMContentLoaded'
+document.addEventListener('DOMContentLoaded', (event) => {
+    
+    // Assicurati che tutte le costanti e le variabili siano dichiarate qui dentro:
+    const quizArea = document.getElementById('quiz-area');
+    const startButton = document.getElementById('start-button');
+    
+    // Aggiungi un listener per avviare il quiz al click del pulsante iniziale
+    if (startButton) { // Aggiungiamo un controllo per sicurezza
+        startButton.addEventListener('click', startQuiz);
+    }
+
+}); // Fine del blocco di codice sicuro.
+
+// IL RESTO DEL TUO CODICE JAVASCRIPT (le funzioni 'startQuiz', 'showQuestion', ecc.)
+// può restare invariato e deve essere subito dopo questo blocco nel file quiz.js.
+// ... (startQuiz, showQuestion, checkAnswer, nextQuestion, showResults)
 
 /**
  * Avvia il quiz resettando lo stato e mostrando la prima domanda.
