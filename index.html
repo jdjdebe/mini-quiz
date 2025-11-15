@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Open Day - ITIS Grassi & AI</title>
+    <style>
+        /* INIZIO STILI CSS */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Sfondo sfumato ITTS */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            background-color: #ffffff;
+            color: #1e3c72;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            transition: all 0.5s ease-in-out;
+        }
+
+        h1 {
+            color: #ffcc00; /* Giallo acceso per l'attenzione */
+            margin-bottom: 30px;
+            font-size: 2em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: left;
+            box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-text {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+
+        .feedback-message {
+            font-size: 1.1em;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: bold;
+            display: none; /* Inizialmente nascosto */
+        }
+
+        .feedback-correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .feedback-wrong {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #ffcc00;
+            outline: none;
+        }
+
+        button {
+            background-color: #ffcc00;
+            color: #1e3c72;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: #e6b800;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+        /* FINE STILI CSS */
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>🚀 Quiz: Diventa un Espert* del Grassi e dell'AI!</h1>
+        
+        <div id="quiz-area">
+            <p>Preparati a dimostrare quanto sai sull'ITIS Carlo Grassi e sull'Intelligenza Artificiale!</p>
+            <button id="start-button">INIZIA IL QUIZ</button>
+        </div>
+        
+    </div>
+
+    <script src="quiz.js"></script>
+    </body>
+</html>
